@@ -1,0 +1,7 @@
+Demo Video Linki
+-https://drive.google.com/file/d/1_NdD45EKvIKWvRu4sDfGecOLSumBj640/view?usp=sharing
+
+Eğitilmiş Dosyalar Linki (Epoch Sayısına Göre Sıralanmıştır
+-https://drive.google.com/file/d/1HZiMbJqCo2Snnpp64ccFbqFLXCFs1ZGH/view?usp=sharing (10 Epoch)
+-https://drive.google.com/file/d/1UdG4H8rVoawt2dfO6zJW7rHv2zUCRIPq/view?usp=sharing (25 Epoch)
+-https://drive.google.com/file/d/1EySP7LKLYmofOuWsKMNfX94rYwLPT9bs/view?usp=sharing (50 Epoch)

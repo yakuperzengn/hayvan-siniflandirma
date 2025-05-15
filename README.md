@@ -4,16 +4,37 @@
 Bu proje, hayvan resimlerini sınıflandırmak için PyTorch ile eğitilmiş bir Convolutional Neural Network (CNN) modelini içerir. Eğitim Google Colab ortamında yapılmış, ardından model `.pt` formatında kaydedilip Gradio üzerinden kullanıcı dostu bir arayüzle sunulmuştur.
 
 ## 📁 Proje Yapısı
+🐍 Gereksinimler
+Aşağıdaki kütüphaneleri kurmak için bir sanal ortam oluşturman önerilir:
+python -m venv venv
+source venv/bin/activate  # Windows kullanıyorsan: venv\Scripts\activate
+
+Gerekli Python paketlerini kurmak için:
+pip install torch torchvision pillow gradio
+
+⚠️ torch paketini sistemine uygun olarak PyTorch Resmi Sitesi üzerinden de kurabilirsin.
+
+🗂️ Dosya Yapısı
+.
+├── animals_full_checkpoint25.pth   # Eğitilmiş model ağırlıkları
+├── app.py                          # Gradio arayüzünü içeren ana Python dosyası
+└── README.md                       # Bu dosya                 # Eğitimde kullanılan veri seti (Animals-10)
+
+🚀 Uygulamayı Başlat
+
+Uygulamayı çalıştırmak için:
+python app.py
+Gradio arayüzü tarayıcında otomatik olarak açılacaktır. Görseli yükle, model tahminini gör 🎯
+
+💡 Notlar
+Model 128x128 boyutunda giriş bekler, Gradio arayüzü bunu otomatik olarak ayarlar.
+
+Eğer GPU'n varsa model otomatik olarak CUDA'yı kullanır.
+
+Model dosyası olan animals_full_checkpoint25.pth ile aynı klasörde çalıştırmalısın.
 
 ```
-📦 Hayvan-Siniflandirma-Projesi
-├── animals_model.pt           # Eğitilmiş model ,Drive Linki Yazıldı
-├── app.py                     # Gradio tabanlı görsel sınıflandırma arayüzü
-├── README.md                  # Bu döküman
-├── requirements.txt           # Gerekli Python kütüphaneleri
-└── dataset/                   # Eğitimde kullanılan veri seti (Animals-10)
-```
-## MODEL
+## MODELLER (linkler.txt Dosyasında Epoch sayılarına göre paylaşılmıştır.)
 -https://drive.google.com/file/d/10ES5Hs1GJ5K_mai8O2ur5mzzWLSYxwwi/view?usp=sharing
 
 
@@ -31,13 +52,12 @@ Bu proje, hayvan resimlerini sınıflandırmak için PyTorch ile eğitilmiş bir
 ```python
 # Google Colab ortamında:
 !pip install torch torchvision matplotlib
-!git clone https://github.com/yourgithub/yourrepo.git
 ```
 
 Eğitim sırasında:
 - Loss & Accuracy grafikleri çizildi
 - F1 Score hesaplandı
-- Model `.pt` olarak kaydedildi
+- Model `.pth` olarak kaydedildi
 
 ## 🖼️ Arayüz (Gradio)
 
